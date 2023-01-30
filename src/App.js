@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import RatingPage from "./components/RatingPage";
+import ThankPage from "./components/ThankPage";
+import { useState } from "react";
 function App() {
+  let [thank, setThank] = useState(false);
+  const [point, setPoint] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {thank ? (
+        <ThankPage point={point} />
+      ) : (
+        <RatingPage
+          setThank={() => setThank(true)}
+          point={point}
+          setPoint={setPoint}
+        />
+      )}
     </div>
   );
 }

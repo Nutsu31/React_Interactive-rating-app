@@ -6,6 +6,15 @@ const Ratings = (props) => {
   const numbers = [1, 2, 3, 4, 5];
   const [active, setActive] = useState(null);
 
+  // const handleChange = (props) => {
+  //   if (props.num === 0) {
+  //     return;
+  //   } else {
+  //     setActive(props.num);
+  //     props.setPoint(props.num);
+  //   }
+  // };
+
   const eachButton = numbers.map((num) => {
     return (
       <ButtonRatings

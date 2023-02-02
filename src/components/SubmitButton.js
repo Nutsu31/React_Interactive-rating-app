@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 const SubmitButton = (props) => {
-  return (
-    <ButtonSubmit onClick={() => props.setThank(true)}>Submit</ButtonSubmit>
-  );
+  function handleChange() {
+    if (props.point === 0) {
+      return;
+    } else {
+      props.setThank(true);
+    }
+  }
+
+  return <ButtonSubmit onClick={() => handleChange()}>Submit</ButtonSubmit>;
 };
 
 export default SubmitButton;

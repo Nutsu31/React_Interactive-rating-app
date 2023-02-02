@@ -20,7 +20,7 @@ const RatingPage = (props) => {
           <span>{span}</span>
         </Info>
         <Ratings setPoint={props.setPoint} />
-        <SubmitButton setThank={props.setThank} />
+        <SubmitButton setThank={props.setThank} point={props.point} />
       </Container>
     </div>
   );
